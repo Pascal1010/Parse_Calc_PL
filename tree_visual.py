@@ -29,9 +29,6 @@ class VisualTool:
     def draw(self, node, x, y, level, gap):
         if node.root:
             my_node = VisualNode(node.root, self.display, x, y)
-            if my_node.pad_rect.collidelist(self.nodes):
-                my_node.x += 30
-            self.nodes.append(my_node)
             my_node.draw_node()
             next_level_gap = gap // 2
             if node.left:
